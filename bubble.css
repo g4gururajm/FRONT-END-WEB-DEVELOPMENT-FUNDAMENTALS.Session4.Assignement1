@@ -1,0 +1,28 @@
+/* Importing Css3 library*/
+@import "compass/css3";
+.bubble { 	
+  @include box-sizing(content-box);				/* Setting Box  */
+  width: 120px;									/* width of the box 120px */
+  height: 80px;									/* height of the box 80px*/
+  position: relative;							/* setting position of box relative */
+  margin: 38px;									/* setting margin of box 38px  */
+  border-radius: 10px;							/* setting border radius of box to 10px */
+  color: rgba(0,0,0,1);							/* setting box color */
+  background: #38D5EE;							/* setting box background color*/
+}
+
+.bubble::before {								/* setting the box style before calling*/
+  @include box-sizing(content-box);				/* css3 importing box sizing*/
+  position: absolute;							/* setting the box position absolute*/
+  width: 0;  									/* setting box width to 0px such that its give cone chape*/
+  height: 0; 									/* setting box height to 0px such that its give cone chape*/	
+  content: "";									/* setting the content of box to null */
+  top: 12px;									/* setting top size to 12px*/
+  right: 100%;									/* setting boxsize to 100% of doc*/
+  margin: 0 0 0 10px;							/* setting margin to 10px right*/
+  border-right: 26px solid #38D5EE;				/* setting box border right with 26px with solid blue color*/
+  border-left: 0px solid;						/* setting box border left with 0px with solid blue color*/
+  border-top: 10px solid rgba(0,0,0,0); 		/* setting box border top with 10px with color black */
+  border-bottom: 10px solid rgba(0,0,0,0);		/* setting box border botom to 10px with solid white color */
+  color: rgba(0,0,0,1);							/* seeting color of box with white*/
+}
